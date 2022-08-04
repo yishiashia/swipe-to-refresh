@@ -1,6 +1,6 @@
 {
   "name": "swipe-to-refresh",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A WebComponent to pull the window down and refresh",
   "main": "./dist/swipe-refresh.js",
   "types": "./types/index.d.ts",
