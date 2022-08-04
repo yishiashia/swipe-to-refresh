@@ -1,0 +1,21 @@
+.container {
+  position: fixed;
+  height: 2rem;
+  padding: 0 0.75rem;
+  top: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: white;
+  border-radius: 1rem;
+  z-index: 999;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 1px 1px 0 rgb(66 66 66 / 8%), 0 1px 3px 1px rgb(66 66 66 / 16%);
+  span {
+    margin-left: 0.25rem;
+    font-size: 0.875rem;
+    line-height: 1rem;
+    color: #666666;
+  }
+}

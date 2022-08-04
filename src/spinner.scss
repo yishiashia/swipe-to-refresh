@@ -1,0 +1,32 @@
+#container {
+  display: flex;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 3px solid #E5E5E5;
+  svg {
+    margin: -3px;
+    #spinner {
+      transform-origin: center;
+      stroke-dasharray: 251.33;
+      stroke-dashoffset: 160.65;
+      transform: rotate(-90deg);
+    }
+  }
+  &.animated {
+    animation-name: animation;
+    animation-duration: 1.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes animation {
+  0% {
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}

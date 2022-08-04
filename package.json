@@ -1,0 +1,78 @@
+{
+  "name": "swipe-to-refresh",
+  "version": "1.0.0",
+  "description": "A WebComponent to pull the window down and refresh",
+  "main": "./dist/swipe-refresh.js",
+  "types": "./types/index.d.ts",
+  "scripts": {
+    "build": "rollup -c",
+    "dev":"rollup --config build/dev.ts --watch",
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yishiashia/swipe-to-refresh.git"
+  },
+  "keywords": [
+    "swipe",
+    "pull",
+    "refresh",
+    "drag",
+    "drop",
+    "webcomponent"
+  ],
+  "author": "yishiashia <yishiashia@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yishiashia/swipe-to-refresh/issues"
+  },
+  "homepage": "https://github.com/yishiashia/swipe-to-refresh#readme",
+  "files": [
+    "dist/*",
+    "types/*"
+  ],
+  "dependencies": {
+    "@babel/runtime": "^7.14.6",
+    "@babel/runtime-corejs3": "^7.14.7",
+    "@webcomponents/custom-elements": "^1.5.0",
+    "jest-environment-jsdom": "^28.1.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.17.12",
+    "@babel/plugin-transform-runtime": "^7.14.3",
+    "@babel/plugin-transform-typescript": "^7.18.4",
+    "@babel/preset-env": "^7.14.2",
+    "@babel/preset-typescript": "^7.17.12",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-eslint": "^8.0.2",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@rollup/plugin-replace": "^4.0.0",
+    "@rollup/plugin-typescript": "^8.3.3",
+    "@testing-library/dom": "^8.16.0",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@typescript-eslint/eslint-plugin": "^5.30.6",
+    "@typescript-eslint/parser": "^5.30.6",
+    "@webcomponents/webcomponentsjs": "^2.6.0",
+    "autoprefixer": "^10.4.7",
+    "babel-jest": "^28.1.2",
+    "eslint": "^8.14.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "jest": "^28.1.2",
+    "jest-dom": "^4.0.0",
+    "postcss": "^8.4.13",
+    "postcss-import-url": "^7.0.0",
+    "postcss-nested": "^5.0.6",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-serve": "^2.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.51.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  }
+}
