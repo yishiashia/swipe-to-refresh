@@ -30,14 +30,6 @@ export default class refreshLoading extends HTMLElement {
       this.shadowRoot.innerHTML = this.template({ text: this._text });
       rootElement = this.shadowRoot?.querySelector(".container");
     }
-    if (
-      this.hasAttribute("animated") &&
-      this.getAttribute("animated") === "true"
-    ) {
-      if (rootElement) {
-        rootElement.classList.add("animated");
-      }
-    }
 
     // Style
     if (_self !== null && _self.shadowRoot !== null) {
@@ -50,24 +42,6 @@ export default class refreshLoading extends HTMLElement {
       rootElement.addEventListener("transitionend", () => {
         this.style.display = "none";
       });
-    }
-  }
-
-  set degree(val: number) {
-    const circleElement = this.shadowRoot?.querySelector("circle");
-    if (circleElement !== null && circleElement !== undefined) {
-      circleElement.style.transform = `rotate(${val}deg)`;
-    }
-  }
-
-  set animated(enableAnimation: boolean) {
-    const rootElement = this.shadowRoot?.querySelector("#container");
-    if (rootElement) {
-      if (enableAnimation) {
-        rootElement.classList.add("animated");
-      } else {
-        rootElement.classList.remove("animated");
-      }
     }
   }
 

@@ -84,6 +84,9 @@ export default class swipeToRefresh extends HTMLElement {
     if (this.hasAttribute("refresh-text")) {
       this.refreshText = String(this.getAttribute("refresh-text"));
     }
+    if (this.hasAttribute("finish-text")) {
+      this.finishText = String(this.getAttribute("finish-text"));
+    }
   }
 
   onTouchStart(e: Event) {
@@ -191,6 +194,7 @@ export default class swipeToRefresh extends HTMLElement {
 
   template(pullText: string): string {
     return `
+      <h1 id="testtest"></h1>
       <refresh-loading
         id="loading"
         text="${pullText}"
