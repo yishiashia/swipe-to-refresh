@@ -5,9 +5,18 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="refresh-loading.js"></script>
+  <script src="swipe-refresh.js"></script>
+  <script>
+    function doRefresh() {
+      console.log("Refresh!!");
+    }
+    function init() {
+      document.querySelector("swipe-refresh").refresh = doRefresh;
+    }
+  </script>
 </head>
-<body>
-  <refresh-loading></refresh-loading>
+<body onload="init()">
+  <swipe-refresh></swipe-refresh>
+  <div style="width: 100%; height: 150vh;"></div>
 </body>
 </html>

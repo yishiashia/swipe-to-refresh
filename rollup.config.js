@@ -47,16 +47,16 @@ const plugins = [
       /\/core-js\//
     ]
   }),
-  terser(),
+  // terser(),
 ]
 
 export default [
   {
     input: 'src/index.ts',
     output: {
-      file: 'dist/refresh-loading.js',
+      file: 'dist/swipe-refresh.js',
       format: 'umd',
-      name: 'RefreshLoading',
+      name: 'swipeToRefresh',
       inlineDynamicImports: true
     },
     plugins: plugins

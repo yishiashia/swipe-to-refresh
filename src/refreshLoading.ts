@@ -5,18 +5,19 @@ import Spinner from "./spinner";
 import loadingStyle from "./refreshLoading.scss";
 
 export default class refreshLoading extends HTMLElement {
-  text: string;
+  _text: string;
   spinner: Spinner | null;
   constructor() {
     super();
     // Shadow dom
     this.attachShadow({ mode: "open" });
-    this.text = "Swipe to refresh";
+    this._text = "Swipe to refresh";
     this.spinner = null;
   }
 
   connectedCallback(): void {
     const _self = this;
+    let rootElement: HTMLElement | null = null;
 
     // DOM
     if (this.shadowRoot !== null) {
@@ -24,15 +25,15 @@ export default class refreshLoading extends HTMLElement {
         this.hasAttribute("text") &&
         String(this.getAttribute("text")).trim() !== ""
       ) {
-        this.text = String(this.getAttribute("text")).trim();
+        this._text = String(this.getAttribute("text")).trim();
       }
-      this.shadowRoot.innerHTML = this.template({ text: this.text });
+      this.shadowRoot.innerHTML = this.template({ text: this._text });
+      rootElement = this.shadowRoot?.querySelector(".container");
     }
     if (
       this.hasAttribute("animated") &&
       this.getAttribute("animated") === "true"
     ) {
-      const rootElement = this.shadowRoot?.querySelector("#container");
       if (rootElement) {
         rootElement.classList.add("animated");
       }
@@ -43,6 +44,12 @@ export default class refreshLoading extends HTMLElement {
       const styleElement = document.createElement("style");
       styleElement.appendChild(document.createTextNode(loadingStyle));
       _self.shadowRoot.appendChild(styleElement);
+    }
+
+    if (rootElement) {
+      rootElement.addEventListener("transitionend", () => {
+        this.style.display = "none";
+      });
     }
   }
 
@@ -64,11 +71,21 @@ export default class refreshLoading extends HTMLElement {
     }
   }
 
+  set text(val: string) {
+    this._text = val;
+    if (this.shadowRoot !== null) {
+      const textElement = this.shadowRoot.getElementById("hint-text")
+      if (textElement !== null) {
+        textElement.textContent = val;
+      }
+    }
+  }
+
   template(data: { text: string }): string {
     return `
     <div class="container">
       <spinner-icon></spinner-icon>
-      <span>${data.text}</span>
+      <span id="hint-text">${data.text}</span>
     </div>
     `;
   }
