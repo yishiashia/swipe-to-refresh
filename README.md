@@ -54,16 +54,10 @@ class customizedSwipeToRefresh extends SwipeToRefresh {
 ```
 
 ### Options
-- [swipe-to-refresh](#swipe-to-refresh)
-  - [Install](#install)
-  - [Syntax](#syntax)
-  - [Demo page](#demo-page)
-  - [Usage](#usage)
-    - [Options](#options)
-      - [pull-text (optional)](#pull-text-optional)
-      - [drop-text (optional)](#drop-text-optional)
-      - [refresh-text (optional)](#refresh-text-optional)
-      - [finish-text (optional)](#finish-text-optional)
+- [pull-text (optional)](#pull-text-optional)
+- [drop-text (optional)](#drop-text-optional)
+- [refresh-text (optional)](#refresh-text-optional)
+- [finish-text (optional)](#finish-text-optional)
 
 #### pull-text (optional)
 
