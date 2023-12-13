@@ -1,0 +1,35 @@
+{
+  "name": "TouchEmulator",
+  "version": "0.0.2",
+  "homepage": "https://github.com/hammerjs/Emulator",
+  "authors": [
+    "Jorik Tangelder <j.tangelder@gmail.com>"
+  ],
+  "description": "Emulate touch input",
+  "main": "touch-emulator.js",
+  "keywords": [
+    "touch",
+    "hammerjs",
+    "input",
+    "emulator",
+    "simulator"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "0.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.0.2",
+    "commit": "8f99270cd3b159c380508fc0faca49cbdb07c6e5"
+  },
+  "_source": "https://github.com/hammerjs/Emulator.git",
+  "_target": "^0.0.2",
+  "_originalSource": "hammer-touchemulator",
+  "_direct": true
+}
