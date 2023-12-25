@@ -38,7 +38,7 @@ A WebComponent to pull the window down and refresh
 ```
 
 ## Demo page
-The demo page: https://yishiashia.github.io/swipe-to-refresh.html
+The demo page: https://yishiashia.github.io/swipe-to-refresh/
 ## Usage
 
 If you want to customize this web component, you can import the library and
