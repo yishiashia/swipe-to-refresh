@@ -1,12 +1,12 @@
 {
   "name": "swipe-to-refresh",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A WebComponent to pull the window down and refresh",
   "main": "./dist/swipe-refresh.js",
   "types": "./types/index.d.ts",
   "scripts": {
     "build": "rollup -c",
-    "dev":"rollup --config build/dev.ts --watch",
+    "dev": "rollup --config build/dev.ts --watch",
     "test": "jest --coverage"
   },
   "repository": {
